@@ -1,6 +1,6 @@
 homeassistant:
   # Name of the location where Home Assistant is running
-  name: Upstairs Door Controller
+  name: Downstairs Door Controller
   # Location required to calculate the time the sun rises and sets
   latitude: 35.7125
   longitude: -88.7021
@@ -29,25 +29,27 @@ logbook:
 binary_sensor:
   - platform: rpi_gpio
     invert_logic: true
-    scan_interval: 10
     ports:
-      26: Test Door
+      26: Down Test Door 1
+      19: Down Test Door 2
 
 group:
-  upstairs_doors:
-    name: Upstairs Doors
+  downstairs_doors:
+    name: Downstairs Doors
     view: no
     entities:
-      - binary_sensor.test_door
+      - binary_sensor.down_test_door_1
+      - binary_sensor.down_test_door_2
+      - binary_sensor.down_test_door_3
 
 mqtt:
   broker: !secret mqtt_host
-  port: 8883
-  client_id: hass
+  port: 1883
+  client_id: hass_down
   keepalive: 60
   username: !secret mqtt_user
   password: !secret mqtt_pass    
 
 mqtt_eventstream:
-  publish_topic: slaves/upstairs/doors
+  publish_topic: slaves/downstairs/doors
   subscribe_topic: master
