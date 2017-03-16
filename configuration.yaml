@@ -30,17 +30,65 @@ binary_sensor:
   - platform: rpi_gpio
     invert_logic: true
     ports:
-      26: Down Test Door 1
-      19: Down Test Door 2
+      2: Front Entry Door
+      3: Side Entry Door
+      4: Back Entry Door
+      17: Garage Entry Door
+      27: Master Bedroom Door
+      22: Master Bath Door
+      10: Master Closet 1 Door
+      9: Master Closet 2 Door
+      11: Master Toilet Door
+      5: Pantry Door
+      6: Laundry Door
+      13: Half Bath Door
+      19: Guest Bedroom Door
+      26: Guest Bathroom Door
+      14: Guest Closet Door
+      15: Coat Closet Door
+      18: Garage Door 1
+      23: Garage Door 2
+      #24:
+      #25:
+      #8:
+      7: Dining Room Window
+      12: Guest Bedroom Window
+      16: Master Bedroom Window
+      20: Breakfast Area Window
+      21: Living Room Window
 
 group:
   downstairs_doors:
     name: Downstairs Doors
     view: no
     entities:
-      - binary_sensor.down_test_door_1
-      - binary_sensor.down_test_door_2
-      - binary_sensor.down_test_door_3
+      - binary_sensor.front_entry_door
+      - binary_sensor.side_entry_door
+      - binary_sensor.garage_entry_door
+      - binary_sensor.back_entry_door
+      - binary_sensor.master_bedroom_door
+      - binary_sensor.master_bath_door
+      - binary_sensor.master_closet_1_door
+      - binary_sensor.master_closet_2_door
+      - binary_sensor.master_toilet_door
+      - binary_sensor.pantry_door
+      - binary_sensor.laundry_door
+      - binary_sensor.half_bath_door
+      - binary_sensor.guest_bedroom_door
+      - binary_sensor.guest_bathroom_door
+      - binary_sensor.guest_closet_door
+      - binary_sensor.coat_closet_door
+      - binary_sensor.garage_door_1
+      - binary_sensor.garage_door_2
+  downstairs_windows: 
+    name: Downstairs Windows
+    view: no
+    entities:
+      - binary_sensor.dining_room_window
+      - binary_sensor.guest_bedroom_window
+      - binary_sensor.master_bedroom_window
+      - binary_sensor.breakfast_area_window
+      - binary_sensor.living_room_window
 
 mqtt:
   broker: !secret mqtt_host
@@ -52,4 +100,4 @@ mqtt:
 
 mqtt_eventstream:
   publish_topic: slaves/downstairs/doors
-  subscribe_topic: master
+  subscribe_topic: master/none
