@@ -1,0 +1,8 @@
+#default_view:
+#  view: yes
+#  entities:
+#    - alarm_control_panel.security_system
+#    - group.downstairs_doors
+#    - group.downstairs_windows
+#    - group.upstairs_doors
+#    - group.upstairs_windows

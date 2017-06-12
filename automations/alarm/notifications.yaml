@@ -1,0 +1,45 @@
+- alias: Notify on Alarm Disarm
+  hide_entity: False
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.security_system
+      to: 'disarmed'
+  action:
+    service: notify.alarm_info
+    data:
+      message: Alarm disarmed.
+
+- alias: Notify on Alarm Arm Away
+  hide_entity: False
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.security_system
+      to: 'armed_away'
+  action:
+    service: notify.alarm_info
+    data:
+      message: Alarm armed away.
+
+- alias: Notify on Alarm Arm Stay
+  hide_entity: False
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.security_system
+      to: 'armed_home'
+  action:
+    service: notify.alarm_info
+    data:
+      message: Alarm armed stay.
+
+- alias: Notify on Alarm Tiggered
+  trigger:
+    - platform: state
+      entity_id: alarm_control_panel.security_system
+      to: 'triggered'
+  action:
+    service: notify.alarm_alert
+    data:
+      message: 'Alarm triggered!'
+      data:
+        push:
+          category: 'ALARM'

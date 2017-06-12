@@ -1,0 +1,24 @@
+- name: html5_push
+  platform: html5
+  gcm_api_key: !secret gcm_api_key
+  gcm_sender_id: !secret gcm_sender_id
+- name: matt_text
+  platform: smtp
+  server: smtp.gmail.com
+  port: 587
+  timeout: 15
+  sender: !secret smtp_notification_account_email
+  starttls: true
+  username: !secret smtp_notification_account_email
+  password: !secret smtp_notification_account_pass
+  recipient: !secret smtp_text_notification_matt
+- name: alydia_text
+  platform: smtp
+  server: smtp.gmail.com
+  port: 587
+  timeout: 15
+  sender: !secret smtp_notification_account_email
+  starttls: true
+  username: !secret smtp_notification_account_email
+  password: !secret smtp_notification_account_pass
+  recipient: !secret smtp_text_notification_alydia

@@ -1,0 +1,27 @@
+- alias: Startup - Send Notification
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: notify.ios_matts_iphone
+      data:
+        message: Home Assistant has been restarted successfully.
+
+- alias: Startup - Request iOS Location Update
+  trigger:
+    platform: homeassistant
+    event: start
+  action:
+    - service: notify.ios_matts_iphone
+      data:
+        message: request_location_update  
+    - service: notify.ios_alydias_iphone
+      data:
+        message: request_location_update
+    - delay: 00:00:20
+    - service: notify.ios_matts_iphone
+      data:
+        message: request_location_update
+    - service: notify.ios_alydias_iphone
+      data:
+        message: request_location_update

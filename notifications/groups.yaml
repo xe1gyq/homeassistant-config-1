@@ -1,0 +1,14 @@
+- name: alarm_alert
+  platform: group
+  services:
+#    - service: matt_text
+#    - service: alydia_text
+#    - service: ios_matts_iphone
+    - service: html5_push
+
+- name: alarm_info
+  platform: group
+  services:
+    - service: html5_push
+    - service: ios_matts_iphone
+#    - service: ios_alydias_iphone

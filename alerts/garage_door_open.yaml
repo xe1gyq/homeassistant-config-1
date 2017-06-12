@@ -1,0 +1,7 @@
+garage_door:
+  name: Garage Door Open
+  entity_id: cover.linear_unknown_type4744_id3030_open_16_0
+  state: 'on'
+  repeat: 10
+  notifiers:
+    - notify.alarm_info

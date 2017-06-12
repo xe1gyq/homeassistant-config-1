@@ -1,0 +1,36 @@
+- alias: Alarm Tiggered by Door or Window
+  hide_entity: False
+  trigger:
+    - platform: state
+      entity_id: !include ../../collections/contact_sensors.yaml
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: alarm_control_panel.security_system
+        state: 'armed_away'
+      - condition: state
+        entity_id: alarm_control_panel.security_system
+        state: 'armed_home'
+  action:
+    service: alarm_control_panel.alarm_trigger
+    entity_id: alarm_control_panel.security_system
+
+- alias: Alarm Tiggered by Motion
+  hide_entity: False
+  trigger:
+    - platform: state
+      entity_id: !include ../../collections/motion_sensors.yaml
+      from: '0'
+      to: '8'
+  condition:
+    condition: state
+    entity_id: alarm_control_panel.security_system
+    state: 'armed_away'
+  action:
+    service: notify.alarm_alert
+    data:
+      message: 'Alarm triggered!'
+      data:
+        push:
+          category: 'ALARM'

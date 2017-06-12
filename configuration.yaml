@@ -1,0 +1,142 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret latitude
+  longitude: !secret longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 125
+  # metric for Metric, imperial for Imperial
+  unit_system: imperial
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: America/Chicago
+ 
+  customize: !include_dir_merge_named customize
+
+# Enables the frontend
+frontend:
+
+ios:
+  push:
+    categories:
+      - name: Alarm
+        identifier: 'ALARM'
+        actions:
+          - identifier: 'SOUND_ALARM'
+            title: 'Sound Alarm'
+            activationMode: 'background'
+            authenticationRequired: yes
+            destructive: yes
+            behavior: 'default'
+          - identifier: 'SILENCE_ALARM'
+            title: 'Silence Alarm'
+            activationMode: 'background'
+            authenticationRequired: yes
+            destructive: no
+            behavior: 'textInput'
+            textInputButtonTitle: 'Silence!'
+            textInputPlaceholder: 'Placeholder'
+
+http:
+  # Uncomment this to add a password (recommended!)
+  api_password: !secret api_password
+  base_url: !secret base_url
+
+influxdb:
+  host: 127.0.0.1
+
+device_tracker:
+  - platform: ddwrt
+    host: 192.168.1.1
+    username: !secret ddwrt_user
+    password: !secret ddwrt_pass
+    track_new_devices: false
+  - platform: owntracks
+    max_gps_accuracy: 200
+    waypoints: True
+    waypoint_whitelist:
+      - location
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+config:
+
+group: !include_dir_merge_named groups
+
+automation: !include_dir_merge_list automations
+
+zwave:
+  device_config: !include zwave_device_config.yaml
+  usb_path: /dev/ttyACM0
+  config_path: /srv/homeassistant/src/python-openzwave/openzwave/config
+
+cover:
+  platform: zwave
+
+notify: !include_dir_merge_list notifications/
+
+#MQTT
+mqtt:
+  broker: !secret mqtt_host
+#  certificate: !secret mqtt_ssl_cert_path
+  port: 1883
+  client_id: hass_master
+  keepalive: 60
+  username: !secret mqtt_user
+  password: !secret mqtt_pass
+
+mqtt_eventstream:
+  subscribe_topic: slaves/#
+  publish_topic: master
+
+sensor:
+  - platform: yr
+
+  # RPi Monitoring
+  - platform: systemmonitor
+    resources:
+      - type: disk_use_percent
+        arg: /home
+      - type: memory_free
+      - type: processor_use
+
+  # Internet Speed Test
+  - platform: speedtest
+    minute: 0
+    server_id: 1134
+    hour:
+      - 0
+      - 6
+      - 12
+      - 21
+      - 18
+    monitored_conditions:
+      - ping
+      - download
+      - upload
+
+alarm_control_panel:
+  - platform: manual
+    name: Security System
+    pending_time: 1
+    trigger_time: 600
+
+alert: !include_dir_merge_named alerts
+
+light:
+  - platform: flux_led
+    devices:
+      192.168.1.108:
+        name: LED Strip
+        protocol: 'ledenet'
+        mode: 'rgbw'

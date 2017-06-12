@@ -1,0 +1,233 @@
+
+amazon8b1335afc:
+  hide_if_away: false
+  mac: 40:B4:CD:0A:1F:2D
+  name: amazon-8b1335afc
+  picture:
+  track: false
+  vendor: Amazon Technologies Inc.
+
+d0667b0d4414:
+  hide_if_away: false
+  mac: D0:66:7B:0D:44:14
+  name: d0667b0d4414
+  picture:
+  track: false
+  vendor: Samsung Electronics Co.,Ltd
+
+8cae90041f07:
+  hide_if_away: false
+  mac: 8C:AE:90:04:1F:07
+  name: 8cae90041f07
+  picture:
+  track: false
+  vendor: unknown
+
+7812b8080b06:
+  hide_if_away: false
+  mac: 78:12:B8:08:0B:06
+  name: 7812b8080b06
+  picture:
+  track: false
+  vendor: ORANTEK LIMITED
+
+mattsmbp2:
+  hide_if_away: false
+  mac: 6C:40:08:A0:E7:CE
+  name: Matts-MBP-2
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+chromecast:
+  hide_if_away: false
+  mac: 54:60:09:0D:C6:F4
+  name: Chromecast
+  picture:
+  track: false
+  vendor: Google, Inc.
+
+appletv:
+  hide_if_away: false
+  mac: 58:55:CA:5A:11:AD
+  name: Apple-TV
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+98e0d9a3e551:
+  hide_if_away: false
+  mac: 98:E0:D9:A3:E5:51
+  name: 98e0d9a3e551
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+matts_iphone:
+  hide_if_away: false
+  mac: CC:20:E8:28:F9:4A
+  name: Matt's iPhone
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+alydias_iphone:
+  hide_if_away: false
+  mac: A4:B8:05:BD:6D:00
+  name: Alydias-iPhone
+  picture:
+  track: true
+  vendor: Apple, Inc.
+
+00185641dab2:
+  hide_if_away: false
+  mac: 00:18:56:41:DA:B2
+  name: 00185641dab2
+  picture:
+  track: false
+  vendor: EyeFi, Inc
+
+location_mattiphone:
+  hide_if_away: false
+  mac:
+  name: location
+  picture:
+  track: false
+  vendor:
+
+
+nbsp:
+  hide_if_away: false
+  mac: 9C:FC:01:7F:00:6C
+  name: '&nbsp;'
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+8c29371621c8:
+  hide_if_away: false
+  mac: 8C:29:37:16:21:C8
+  name: 8c29371621c8
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+nbsp_2:
+  hide_if_away: false
+  mac: A4:5E:60:C3:B0:61
+  name: '&nbsp;'
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+c0f2fb4e56fb:
+  hide_if_away: false
+  mac: C0:F2:FB:4E:56:FB
+  name: c0f2fb4e56fb
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+natnlashleycam:
+  hide_if_away: false
+  mac: E4:A4:71:D1:66:86
+  name: NATNL-ASHLEYCAM
+  picture:
+  track: false
+  vendor: Intel Corporate
+
+8c8ef211ad91:
+  hide_if_away: false
+  mac: 8C:8E:F2:11:AD:91
+  name: 8c8ef211ad91
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+24a2e13888c0:
+  hide_if_away: false
+  mac: 24:A2:E1:38:88:C0
+  name: 24a2e13888c0
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+nbsp_3:
+  hide_if_away: false
+  mac: A4:F1:E8:2B:83:04
+  name: '&nbsp;'
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+4c7c5f94809f:
+  hide_if_away: false
+  mac: 4C:7C:5F:94:80:9F
+  name: 4c7c5f94809f
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+6092171838f9:
+  hide_if_away: false
+  mac: 60:92:17:18:38:F9
+  name: 6092171838f9
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+patsysipad:
+  hide_if_away: false
+  mac: 7C:FA:DF:00:EA:17
+  name: Patsys-iPad
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+iphone:
+  hide_if_away: false
+  mac: 68:DB:CA:3F:81:85
+  name: iPhone
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+android37206a9589736940:
+  hide_if_away: false
+  mac: 30:85:A9:D7:B4:25
+  name: android-37206a9589736940
+  picture:
+  track: false
+  vendor: ASUSTek COMPUTER INC.
+
+f0fe6b36b4a4:
+  hide_if_away: false
+  mac: F0:FE:6B:36:B4:A4
+  name: f0fe6b36b4a4
+  picture:
+  track: false
+  vendor: Shanghai High-Flying Electronics Technology Co., Ltd
+
+nbsp_4:
+  hide_if_away: false
+  mac: 7C:DD:90:AC:67:66
+  name: '&nbsp;'
+  picture:
+  track: false
+  vendor: Shenzhen Ogemray Technology Co., Ltd.
+
+dereksiphone:
+  hide_if_away: false
+  mac: 8C:8E:F2:7F:E9:A8
+  name: Dereks-iPhone
+  picture:
+  track: false
+  vendor: Apple, Inc.
+
+8c8ef25e72b0:
+  hide_if_away: false
+  mac: 8C:8E:F2:5E:72:B0
+  name: 8c8ef25e72b0
+  picture:
+  track: false
+  vendor: Apple, Inc.

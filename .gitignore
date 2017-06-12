@@ -1,0 +1,10 @@
+.*
+!/.gitignore
+deps/
+home-assistant.log
+home-assistant_v2.db
+html5_push_registrations.conf
+OZW_Log.txt
+pyozw.sqlite
+secrets.yaml
+tts
